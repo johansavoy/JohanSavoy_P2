@@ -2,7 +2,8 @@
 body
 {
     font-family: "Raleway", sans-serif;
-    width: 900px;
+    max-width: 1340px;
+    width: 100%;
     margin: auto;
 }
 
@@ -10,25 +11,34 @@ header
 {
     display: flex;
     justify-content: space-between;
+    padding: 0;
+    margin: 0;
 }
 
 .onglets
 {
     display: flex;
 }
+
+.onglets nav
+{
+    display: flex;
+    align-items: center;
+}
+
 nav ul
 {
     display: flex;
+    align-items: center;
     list-style-type: none;
-    margin-top: 0;
-    margin-right: 10px;
-    padding-right: 0;
+    margin: 0;
 }
 
 nav ul li
 {
+    height: 100%;
+    padding: 50px 10px;
     border-top: 2.5px solid transparent;
-    padding: 38px 30px 0 30px;
 }
 
 nav ul li:hover
@@ -39,8 +49,10 @@ nav ul li:hover
 
 nav a
 {
+    
     text-decoration: none;
     color: black;
+
 }
 nav a:hover
 {
@@ -48,21 +60,28 @@ nav a:hover
 }
 
 .inscription
-{
-   float: right; 
-   margin-top: 0;
-   margin-right: 5px;
-   padding: 38px 30px 0 30px;
+{ 
+    border-top: 2.5px solid transparent;
+   padding: 50px 10px;
    font-weight: bolder;
    color: #0065fc;
-
+   text-decoration: none;
 }
 
+.search h1
+{
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+.search p
+{
+    margin: 0;
+}
 #searchbar
 {
   display: flex;  
   height: 50px;
-  margin-bottom: 30px;
+  margin: 20px 0 30px 0;
 }
 
 .mapmarker
@@ -72,13 +91,14 @@ nav a:hover
     justify-content: center;
     align-items: center;
     background-color: #f2f2f2;
+    color: black;
     border-top-left-radius: 15px;
     border-bottom-left-radius: 15px;
 }
 
 .searchfield
 {
-    width: 200px;
+    width: 235px;
     border-left: none;
     border-right: none;
     border-top: 1px solid #f2f2f2;
@@ -104,10 +124,16 @@ nav a:hover
     font-size: 16px;
 }
 
+#filters
+{
+    margin-bottom: 40px;
+}
+
 #filters ul
 {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
+    align-items: center;
     padding-left: 0;
 }
 
@@ -115,6 +141,7 @@ nav a:hover
 {
     display: flex;
     list-style-type: none;
+    margin-right: 25px;
 }
 
 .filterstitle a
@@ -129,37 +156,240 @@ nav a:hover
     display: flex;
 }
 
-.Economique i
+.Family
 {
-    width: 15px;
-    height: 15px;
-    margin-right: 15px;
-    border: 2px solid #deebff;
-    padding: 20px;
+    display: flex;
+}
+
+.Love
+{
+    display: flex;
+}
+
+.Animals
+{
+    display: flex;
+}
+
+#filters i
+{
+    position: absolute;
+    display: flex;
+    width: 40px;
+    height: 40px;
+    background-color: #DEEBFF;
+    color: #0065fc;
+    align-items: center;
+    justify-content: center;
     border-radius: 50%;
-    background-color: #deebff;
+    border: 2px solid #DEEBFF;
+}
+
+#filters a
+{
+    position: relative;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    font-weight: bolder;
+    color: black;
+    border: 2px solid #f2f2f2;
+    border-bottom-right-radius: 25px;
+    border-top-right-radius: 25px;
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+    border-left: transparent;
+}
+
+.Economique span
+{
+    display: block;
+    padding: 10px 20px 10px 60px;
+}
+
+.Family span
+{
+    display: block;
+    padding: 10px 20px 10px 60px;
+}
+
+.Love span
+{
+    display: block;
+    padding: 10px 20px 10px 60px;
+}
+
+.Animals span
+{
+    display: block;
+    padding: 10px 20px 10px 60px;
+}
+
+.info
+{
+    display: flex;
+    align-items: center;
+    margin: 0;
+}
+.info i
+{
+    display: flex;
+    width: 25px;
+    height: 25px;
+    background-color: white;
+    color: #0065fc;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: 2px solid #f2f2f2;
+    margin-right: 10px;
+}
+
+main
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 100%;
+}
+main img
+{
+    width: 235px;
+    height: 115px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+#container_1
+{
+    background-color: #f2f2f2;
+    border-radius: 20px;
+    max-width: 880px;
+    min-height: 625px;
+}
+
+#Hebergements
+{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin: 0;
+}
+
+#boxhebergement
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+    background-color: white;
+    color: black;
+    border: 4px solid white;
+    border-radius: 15px; 
+    box-shadow: 4px 2px 20px rgb(201 201 201);
+}
+
+.hebergement_header
+{
+    margin-inline-start: 40px ;
+}
+
+#Herbergements, a
+{
+    text-decoration: none;
+    color: black;
+}
+
+#Hebergements, i
+{
     color: #0065fc;
 }
 
-.Economique a
+#Hebergements, h4
 {
-    padding-bottom: 10px;
-    padding-top: 10px;
-    padding-right: 5px;
-    border-top: 2px solid #f2f2f2;
-    border-bottom: 2px solid #f2f2f2;
-    border-right: 2px solid #f2f2f2;
-    border-left: none;
-    border-top-right-radius: 25px;
-    border-bottom-right-radius: 25px;
-    font-size: 16px;
+    margin: 3px 0 3px 10px ;
+}
+
+#Hebergements, p
+{
+    margin: 2px 10px 5px 10px ;
+}
+
+.stars
+{
+    margin: 0 0 2px 10px;
+}
+
+.stars span i 
+{
+    color: #ebe7e7;
+}
+
+.hebergement_footer
+{
+    margin-inline-start: 40px;
     font-weight: bolder;
 }
 
+#container_2
+{
+    background-color: #f2f2f2;
+    border-radius: 20px;
+    max-width: 420px;
+    min-height: 625px;
+    margin: 45px 40px 50px 35px;
+}
 
+#boxpopular
+{
+    display: flex;
+    justify-content:left;
+    margin: 0 40px 30px 40px;
+    background-color: white;
+    color: black;
+    border: 5px solid white;
+    border-radius: 15px; 
+    box-shadow: 4px 2px 20px rgb(201 201 201)
+}
 
+.popular_header
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-inline-start: 40px;
+    margin-inline-end: 40px;
+}
 
+.popular_header i
+{
+    font-size: 16px;
+    color: black;
+    font-weight: bolder;
+}
 
+#boxpopular img
+{
+    width: 127px;
+    height: 135px;
+    border-top-right-radius: 0%;
+    border-bottom-left-radius: 15px;
+}
+
+.description
+{
+    display: flex;
+    flex-direction: column;
+}
+
+#stars
+{
+    margin: 35px 0 0 20px;
+}
+#stars span i
+{
+    color: #ebe7e7;
+}
 
 
 
