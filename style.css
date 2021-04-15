@@ -70,6 +70,8 @@ nav a:hover
 
 .search h1
 {
+    font-size: 1.5em;
+    font-weight: bolder;
     margin-top: 0;
     margin-bottom: 15px;
 }
@@ -133,6 +135,7 @@ nav a:hover
 {
     display: flex;
     justify-content: flex-start;
+    flex-wrap: wrap;
     align-items: center;
     padding-left: 0;
 }
@@ -141,7 +144,7 @@ nav a:hover
 {
     display: flex;
     list-style-type: none;
-    margin-right: 25px;
+    margin-right: 40px;
 }
 
 .filterstitle 
@@ -182,7 +185,6 @@ nav a:hover
     align-items: center;
     justify-content: center;
     border-radius: 50%;
-    border: 2px solid #DEEBFF;
 }
 
 #filters a
@@ -194,10 +196,7 @@ nav a:hover
     font-weight: bolder;
     color: black;
     border: 2px solid #f2f2f2;
-    border-bottom-right-radius: 25px;
-    border-top-right-radius: 25px;
-    border-top-left-radius: 25px;
-    border-bottom-left-radius: 25px;
+    border-radius: 25px;
     border-left: transparent;
 }
 
@@ -247,14 +246,18 @@ nav a:hover
 
 main
 {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
     max-width: 100%;
-    margin-top: 40px;
+    margin-top: 20px;
     margin-bottom: 65px;
 }
 
+#container
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 40px;
+}
 #container_1
 {
     background-color: #f2f2f2;
@@ -279,6 +282,8 @@ main
 .hebergement_header h2
 {
     margin: 0;
+    font-weight: bold;
+    font-size:1.5em;
 }
 
 #Hebergements a
@@ -290,7 +295,6 @@ main
 .boxhebergement
 {
     display: flex;
-    justify-content: center;
     flex-direction: column;
     width: 245px;
     height: 200px;
@@ -314,20 +318,18 @@ main
 
 .hebergement_description
 {
-    padding: 10px 0 10px 15px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: 1em;
+    padding: 12px 0 11px 17px;
 }
 
-.hebergement_description h4
+.hebergement_description h3
 {
-    font-size: 16px;
+    font-size: 1em;
     font-weight: bolder;
-    margin: 0;
-}
-
-.hebergement_description p
-{
-    margin: 5px 0 5px 0;
-    font-size: 14px;
 }
 
 .hebergement_description i 
@@ -336,7 +338,7 @@ main
     color: #0065fc;
 }
 
-.stars span i 
+.stars .disabled
 {
     color: #ebe7e7;
 }
@@ -375,11 +377,13 @@ main
 .popular_header h2
 {
     margin: 0;
+    font-weight: bolder;
+    font-size: 1.5em;
 }
 
 .popular_header i
 {
-    font-size: 18px;
+    font-size: 1.5em;
     color: black;
     font-weight: bolder;
 }
@@ -422,11 +426,14 @@ main
 
 .description
 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     flex: 1;
     padding: 20px 40px 15px 20px; 
 }
 
-.description h4
+.description h2
 {
     font-size: 16px;
     font-weight: bolder;
@@ -435,8 +442,6 @@ main
 
 .description p
 {
-    font-size: 14px;
-    margin-bottom: 30px;
 }
 
 .description i 
@@ -456,7 +461,15 @@ main
 {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
     margin-bottom: 50px;
+}
+
+.activity h2
+{
+    font-weight: bold;
+    font-size:1.5em;
+    margin-bottom: 30px;
 }
 
 .activities
@@ -500,7 +513,7 @@ main
 {
     display: flex;
     flex-direction: column;
-    align-items: stretch;
+    justify-content: space-between;
     padding: 0;
 }
 
@@ -665,48 +678,102 @@ main
 
 footer
 {
+    position: relative;
     display: flex;
+    justify-content: space-evenly;
     width: 100%;
+    height: 220px;
     background-color: #f2f2f2;
-    padding-bottom: 30px;
+    padding-bottom: 50px;
     padding-top: 40px;
 }
 
-footer div
+footer ::before
 {
-  margin-left: 50px;  
-  margin-right: 190px;
-  
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 0;
+    background-color: #f2f2f2;
+    width: 100vw;
+    height: 100%;
+    transform: translateX(-50%);
+    z-index: -1;
 }
 
 footer a
 {
     text-decoration: none;
-    color: black;
-    
+    color: black;   
 }
 
-footer div ul
+footer ul
 {
     list-style-type: none;
-    padding: 0;
 }
 
-footer div h5
+footer ul li
 {
-    font-size: 1.2vw;
+    margin-bottom: ;
 }
 
-footer div ul li
+footer div h2
 {
-    margin-bottom: 30px;
-    font-size: 1.1vw;
+    font-size: 1em;
+    font-weight: bolder;
+    margin-bottom: 25px;
 }
 
-footer div ul li:hover
+footer ul li:hover
 {
     font-weight: bold;
 }
+
+ @media screen and (max-width:600px)
+
+ {
+    .filterstitle {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+
+    #container_1
+    {
+        border-radius: 0;
+        background-color: white;
+    }
+
+    .info
+    {
+        width: auto;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .boxhebergement
+    {
+        width: auto;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    #container_2
+    {
+        border-radius: 0;
+        margin: 0;
+        align-content: center;
+    }
+
+    #container_3 figure
+    {
+        width: auto;
+        height: 190px;
+        margin: 20px;
+    }
+ }
+
+
 
 
 
