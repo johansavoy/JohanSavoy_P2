@@ -1,3 +1,6 @@
+html {
+    overflow-x: hidden;
+}
 
 body
 {
@@ -114,10 +117,7 @@ nav a:hover
 .searchbutton
 {
     width: 130px;
-    border-left: none;
-    border-right: none;
-    border-top: none;
-    border-bottom: none;
+    border: none;
     border-bottom-right-radius: 15px;
     border-top-right-radius: 15px;
     background-color: #0065fc;
@@ -451,17 +451,12 @@ main
     margin: 0;
 }
 
-.description p
-{
-}
-
 .description i 
 {
     font-size: 12px;
     color: #0065fc;
     margin-bottom: 0;
 }
-
 
 #stars span i
 {
@@ -473,7 +468,10 @@ main
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    margin-bottom: 50px;
+}
+
+.activity {
+    margin: 50px 0 50px 0;
 }
 
 .activity h2
@@ -745,8 +743,19 @@ footer ul li:hover
 
  @media screen and (max-width:576px)
 
-
  {
+     * {
+         padding: 20px;
+     }
+
+     body {
+         box-sizing: border-box;
+     }
+
+     main {
+         margin: 20px 0 0 0;
+         box-sizing: border-box;
+     }
      
     .filterstitle {
         width: 100%;
@@ -754,7 +763,7 @@ footer ul li:hover
     }
 
     .logo {
-        margin-top: 25px;
+        margin: 25px 0 0 20px;
         position: absolute;
     }
     .onglets {
@@ -774,13 +783,26 @@ footer ul li:hover
     }
 
     a.inscription {
-        float: right;
-        padding-top: 35px;
-        padding-bottom: 20px;
+        display: inline-block;
+        position: relative;
+        box-sizing: border-box;
+        left: 75%;
+        padding: 40px 0 20px 0;
     }
 
     nav ul li {
         border-bottom: solid 2.5px #f2f2f2;
+    }
+
+    nav ul li:hover
+    {
+    color: #0065fc;
+    border-bottom: 2.5px solid #0065fc;
+    border-top: none;
+    }
+
+    #filters {
+        margin-bottom: 37px;
     }
 
     .ongletitem {
@@ -807,6 +829,7 @@ footer ul li:hover
 
     .glass {
         display: flex;
+        margin-left: -10px;
         min-width: 50px;
         justify-content: center;
         align-items: center;
@@ -823,11 +846,23 @@ footer ul li:hover
         margin-bottom: 10px;
     }
 
+    #container_1 {
+        margin-top: 40px;
+    }
+
     .boxhebergement
     {
         width: 100%;
-        margin-left: 20px;
-        margin-right: 20px;
+        margin-bottom: 10px;
+    }
+
+    .hebergement_header {
+        padding: 0 0 20px 0;
+    }
+
+    .hebergement_footer {
+        padding: 0;
+        margin : 25px 0 30px 0;
     }
 
     #container_2
@@ -835,33 +870,236 @@ footer ul li:hover
         order: 1;
         border-radius: 0;
         margin: 0;
-        align-content: center;
+        width: 100%;
+        position: relative;
     }
 
-    #container_3 figure
+    #container_2::before
     {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 0;
+    background-color: #f2f2f2;
+    width: 100vw;
+    height: 100%;
+    transform: translateX(-50%);
+    z-index: -1;
+    }
+
+    .boxpopular {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .popular_header {
+        padding: 45px 0 25px 0;
+    }
+
+    .popular_main {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        padding-bottom: 27px;
+    }
+
+    #container_3 {
+        margin: 0;
+    }
+
+    .activity {
+        margin: 0;
+        padding-bottom: 5px;
+    }
+    .activity h2 {
+        margin: 30px 0 33px 0;
+    }
+
+    .activity img {
+        width: 100%;
+        height: 135px;
+    }
+
+    .activity div {
+        width: 100%;
+        height: auto;
+        margin-bottom: 25px;
+    }
+
+    .activity a {
+        width: 100%;
+    }
+
+    .fort_pomegues {
         width: auto;
-        height: 190px;
-        margin: 20px;
+        height: auto;
+        margin-bottom: 25px;
+    }
+
+    .iles_frioul {
+        width: auto;
+        height: auto;
+    }
+
+    .notre_dame {
+        width: auto;
+        height: auto;
+        margin-bottom: 25px;
     }
     
+    .longchamps {
+        width: auto;
+        height: auto;
+    }
+
     footer {
     width: 100%;
     height: auto;
     background-color: #f2f2f2;
-    padding-top: 40px;
-    padding-bottom: 0;
-}
+    padding: 40px 0 0 20px;
+    }
 
     footer div {
-        min-width: 260px;
+    min-width: 260px;
         margin-bottom: 20px;
     }
  }
-   
-html {
-    overflow-x: hidden;
-}
+  
+ @media screen and (max-width:800px)
+ {
+     
+     * {
+        padding: 20px;
+        box-sizing: border-box;
+    }
+
+    main {
+        margin: 20px 0 0 0;
+        box-sizing: border-box;
+    }
+
+    main section {
+        display: flex;
+        flex-direction: column;
+        box-sizing: border-box;
+    }
+    
+   .filterstitle {
+       width: 100%;
+       margin-bottom: 20px;
+   }
+
+   .logo {
+       margin: 25px 0 0 20px;
+   }
+
+   #filters {
+        margin-bottom: 37px;
+    }
+
+    #filters ul li {
+        margin-right: 5px;
+        margin-bottom: 10px;
+    }
+
+    #container_1 {
+        order: 2;
+        width: 100%;
+        padding-bottom: 20px;
+    }
+
+    #container_2 {
+        order: 1;
+        box-sizing: border-box;
+        width: 100%;
+        margin: 0;
+        margin-bottom: 30px;
+        position: relative;
+    }
+
+    .popular_main {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        padding: 0 10px 30px 10px
+    }
+
+    .boxpopular {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .boxpopular img {
+        height: 100%;
+        width: 40%;
+    }
+
+    #container_3 {
+        margin: 0;
+    }
+
+    .activity {
+        margin: 0;
+        padding-bottom: 5px;
+    }
+    .activity h2 {
+        margin: 30px 0 33px 0;
+    }
+
+    .activity img {
+        width: 100%;
+        height: 135px;
+    }
+
+    .activity div {
+        width: 100%;
+        height: auto;
+        margin-bottom: 25px;
+    }
+
+    .activity a {
+        width: 100%;
+    }
+
+    .fort_pomegues {
+        width: auto;
+        height: auto;
+        margin-bottom: 25px;
+    }
+
+    .iles_frioul {
+        width: auto;
+        height: auto;
+    }
+
+    .notre_dame {
+        width: auto;
+        height: auto;
+        margin-bottom: 25px;
+    }
+    
+    .longchamps {
+        width: auto;
+        height: auto;
+    }
+
+    footer {
+    width: 100%;
+    height: auto;
+    background-color: #f2f2f2;
+    padding: 40px 0 0 20px;
+    }
+
+    footer div {
+    min-width: 260px;
+        margin-bottom: 20px;
+    }
+
+
+
+     
+ }
+
 
 
 
