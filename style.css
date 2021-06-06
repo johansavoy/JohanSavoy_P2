@@ -12,7 +12,7 @@ body {
 header {
   display: flex;
   justify-content: space-between;
-  padding: 0;
+  padding: 0 20px;
   margin: 0;
 }
 
@@ -139,7 +139,7 @@ nav a:hover {
 }
 
 #filters ul li span {
-  padding: 10px 30px 10px 55px;
+  padding: 12px 30px 12px 55px;
 }
 
 .filterstitle {
@@ -623,7 +623,7 @@ footer ul li:hover {
 
 @media screen and (max-width: 1200px) and (min-width: 800px) {
   header {
-    padding: 20px;
+    padding: 0 20px 20px 20px;
   }
 
   main {
@@ -675,7 +675,6 @@ footer ul li:hover {
 
   .activity img {
     width: 300px;
-    height: 100%;
   }
 
   .activity a {
@@ -718,10 +717,6 @@ footer ul li:hover {
 }
 
 @media screen and (max-width: 800px) and (min-width: 576px) {
-  header {
-    padding: 20px;
-  }
-
   main {
     margin: 0;
     padding: 20px;
@@ -856,6 +851,7 @@ footer ul li:hover {
 
   header {
     height: 135px;
+    padding: 0;
   }
 
   .filterstitle {
