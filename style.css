@@ -12,8 +12,10 @@ body {
 header {
   display: flex;
   justify-content: space-between;
-  padding: 0 20px;
   margin: 0;
+}
+.logo {
+  margin-left: 0;
 }
 
 .onglets {
@@ -34,7 +36,7 @@ nav ul {
 
 nav ul li {
   height: 100%;
-  padding: 50px 10px;
+  padding: 50px 40px;
   border-top: 2.5px solid transparent;
 }
 
@@ -54,6 +56,7 @@ nav a:hover {
 .inscription {
   border-top: 2.5px solid transparent;
   padding: 50px 10px;
+  margin-left: 30px;
   font-weight: bolder;
   color: #0065fc;
   text-decoration: none;
@@ -94,7 +97,13 @@ nav a:hover {
   font-family: "Raleway", sans-serif;
   font-weight: bold;
   font-size: 16px;
+  font-display: black;
   padding-left: 20px;
+}
+
+#searchbar ::placeholder {
+  color: black;
+  font-size: 1.1em;
 }
 
 .searchbutton {
@@ -135,7 +144,7 @@ nav a:hover {
 #filters ul li {
   display: flex;
   list-style-type: none;
-  margin-right: 40px;
+  margin-right: 20px;
 }
 
 #filters ul li span {
@@ -146,6 +155,7 @@ nav a:hover {
   text-decoration: none;
   color: black;
   font-weight: bolder;
+  font-size: 1.1em;
 }
 
 #filters .filtre {
@@ -155,8 +165,8 @@ nav a:hover {
 #filters i {
   position: absolute;
   display: flex;
-  width: 40px;
-  height: 40px;
+  width: 43px;
+  height: 43px;
   background-color: #deebff;
   color: #0065fc;
   align-items: center;
@@ -174,13 +184,6 @@ nav a:hover {
   border: 2px solid #f2f2f2;
   border-radius: 25px;
   border-left: transparent;
-}
-
-.filterstitle {
-  text-decoration: none;
-  color: black;
-  font-weight: bolder;
-  padding-left: 0;
 }
 
 .info {
@@ -410,7 +413,7 @@ main {
   text-decoration: none;
   color: black;
   font-weight: bold;
-  font-size: 12px;
+  font-size: 1em;
 }
 
 .activities img {
@@ -440,7 +443,7 @@ main {
   text-decoration: none;
   color: black;
   font-weight: bold;
-  font-size: 12px;
+  font-size: 1em;
 }
 
 .fort_pomegues {
@@ -496,7 +499,7 @@ main {
   text-decoration: none;
   color: black;
   font-weight: bold;
-  font-size: 12px;
+  font-size: 1em;
 }
 
 .boxactivity_calanques img {
@@ -526,7 +529,7 @@ main {
   text-decoration: none;
   color: black;
   font-weight: bold;
-  font-size: 12px;
+  font-size: 1em;
 }
 
 .notre_dame {
@@ -579,8 +582,7 @@ footer {
   width: 100%;
   height: 220px;
   background-color: #f2f2f2;
-  padding-bottom: 50px;
-  padding-top: 40px;
+  padding-top: 60px;
 }
 
 footer::before {
@@ -612,7 +614,7 @@ footer ul li {
 }
 
 footer div h2 {
-  font-size: 1em;
+  font-size: 1.2em;
   font-weight: bolder;
   margin-bottom: 25px;
 }
@@ -712,7 +714,6 @@ footer ul li:hover {
 
   footer div {
     min-width: 260px;
-    margin-bottom: 20px;
   }
 }
 
